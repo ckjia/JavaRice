@@ -1,32 +1,39 @@
-import java.util.Scanner;  
+import java.util.Scanner;
 
-class App {
-  public static void main(String[] args) {
-    Scanner sort = new Scanner(System.in);  
+class Main {
+ public static void main(String[] args) {    
+     Scanner sort = new Scanner(System.in);  
 
     int Num1;
     int Num2;
     int Num3;
 
-
-
-    System.out.print("Enter a first number: ");
+    System.out.println("Enter a first number: ");
     Num1 = sort.nextInt();
-    System.out.print("Enter a first number: ");
+    System.out.println("Enter a second number: ");
     Num2 = sort.nextInt();
-    System.out.print("Enter a first number: ");
+    System.out.println("Enter a third number: ");
     Num3 = sort.nextInt();
-   
 
-    if (Num1 < Num2) {
-      System.out.println(Num1);
-    } else if (Num2 < Num3) {
-      System.out.println(Num2);
-    } else {
-      System.out.println(Num3);
+    if (Num1 > Num2){
+        int x = Num1;
+        Num1 = Num2;
+        Num2 = x; 
+    }
+
+    if (Num1 > Num3){
+        int x = Num1;
+        Num1 = Num3;
+        Num3 = x;
     }
     
-    System.out.print("The ascending order is: " + Num1, Num2, Num3);
-
-}
-}
+    if  (Num2 > Num3){
+        int x = Num2;
+        Num2 = Num3;
+        Num3 = x;
+    }
+    
+    System.out.print("The ascending numbers are: " + Num1 + ", " + Num2 +", " + Num3);
+ 
+    }
+    }
