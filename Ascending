@@ -1,0 +1,32 @@
+import java.util.Scanner;  
+
+class App {
+  public static void main(String[] args) {
+    Scanner sort = new Scanner(System.in);  
+
+    int Num1;
+    int Num2;
+    int Num3;
+
+
+
+    System.out.print("Enter a first number: ");
+    Num1 = sort.nextInt();
+    System.out.print("Enter a first number: ");
+    Num2 = sort.nextInt();
+    System.out.print("Enter a first number: ");
+    Num3 = sort.nextInt();
+   
+
+    if (Num1 < Num2) {
+      System.out.println(Num1);
+    } else if (Num2 < Num3) {
+      System.out.println(Num2);
+    } else {
+      System.out.println(Num3);
+    }
+    
+    System.out.print("The ascending order is: " + Num1, Num2, Num3);
+
+}
+}
