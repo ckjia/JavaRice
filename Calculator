@@ -42,11 +42,16 @@ class calculator {
  }
   public static void total (int FirstNumber, int SecondNumber){
     Scanner sort = new Scanner(System.in);
+
     int Operation;
+
     System.out.println("Choose your operation: \n 1 for Addition \n 2 for Minus \n 3 for Multiply \n 4 for Division");
      System.out.print("Enter: ");
      Operation = sort.nextInt();
+
     System.out.println("Your Total is: " );
+
+
     if (Operation == 1){
       System.out.println(add(FirstNumber, SecondNumber));
     } else if (Operation == 2){
