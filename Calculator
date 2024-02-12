@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+class calculator {
+  
+  public static void main(String[] args) {    
+    Scanner sort = new Scanner(System.in);
+     
+      
+     int FirstNumber; 
+     int SecondNumber; 
+ 
+     
+     System.out.println("Please enter your first number: ");
+     FirstNumber = sort.nextInt();
+     System.out.println("Please enter your second number: ");
+     SecondNumber = sort.nextInt();
+ 
+      total(FirstNumber,SecondNumber);
+ 
+     
+   }
+  
+   public static int add (int x, int y){
+   int n;
+   n = x + y;
+   return n;
+ } 
+   public static int minus (int x, int y){
+     int n;
+     n = x - y;
+     return n;
+ }
+ public static int multiply (int x, int y){
+   int n;
+   n = x * y;
+   return n;
+ }
+ public static int divide (int x, int y){
+   int n;
+   n = x / y;
+   return n;
+ }
+  public static void total (int FirstNumber, int SecondNumber){
+    Scanner sort = new Scanner(System.in);
+    int Operation;
+    System.out.println("Choose your operation: \n 1 for Addition \n 2 for Minus \n 3 for Multiply \n 4 for Division");
+     System.out.print("Enter: ");
+     Operation = sort.nextInt();
+    System.out.println("Your Total is: " );
+    if (Operation == 1){
+      System.out.println(add(FirstNumber, SecondNumber));
+    } else if (Operation == 2){
+      System.out.println(minus(FirstNumber, SecondNumber));
+    } else if (Operation == 3){
+      System.out.println(multiply(FirstNumber, SecondNumber));
+    } else if (Operation == 4){
+      System.out.println(divide(FirstNumber, SecondNumber));
+    }
+  }
+
+  }
