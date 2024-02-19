@@ -7,16 +7,16 @@ public class Gap {
 
     
         int [] SorNum = {0, 0, 4, 5, 5, 6, 9, 20, 25, 26, 26};
-        System.out.println("Sorted order: ");
+        System.out.println("\nSorted order: ");
         printArray(SorNum);
 
-        System.out.println("The Gap is: ");
+        System.out.println("\nThe Gap is: ");
         Gapz(SorNum);
 }
 
     public static void printArray(int[] SorNum) {
     for (int j = 1 ; j < SorNum.length; j++) {        
-    System.out.println(SorNum[j]);
+    System.out.print(SorNum[j] + " ");
     }
 } 
     public static void Gapz(int[] SorNum) {
@@ -32,3 +32,5 @@ public class Gap {
     System.out.println(b);
 }
 }
+
+
