@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class App {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        int size = 0; 
+        size = GetSize();
+
+        double Answer = 0; 
+        Answer = GetAverage(size);
+
+        output(Answer,size);
+
+    }
+    
+    static void output(double Answer, int size)
+    {
+    System.out.println("The average of the " + size+ " numbers are:" + Answer);
+    }
+    static int GetSize()
+    {
+        int x = 0;
+        System.out.println("How many numbers to compute?");
+        x = input.nextInt();
+        return x;
+    }
+
+    static double GetAverage(int size){
+        double Average;
+        int[] Numbers = new int[size];
+        for(int x = 1; x<=Numbers.length; x++){
+        
+            System.out.println("Input number " + x);
+            Numbers[x-1] = input.nextInt();
+        }
+
+        Average = Compute(Numbers,size);
+
+        return Average;
+    }
+
+    static double Compute(int[] Numbers , int size){
+        double sum = 0; 
+
+        for (int x = 0; x<size ; x++)
+        {
+            sum = sum + Numbers[x];
+        }
+
+        double ans = sum/size;
+    
+        return ans;
+    }
+
+
+
+    
+}
+
