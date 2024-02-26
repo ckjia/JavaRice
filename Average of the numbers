@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Sum {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+
+        int size; 
+        System.out.print("How many numbers?: ");
+        Average(input.nextInt());
+
+    }
+    public static void Average(int size){
+        int result = 0;
+        for(int x = 1; x<= size; x++){
+            System.out.println("Input number: " + x);
+            result = result + input.nextInt();
+        }
+        result = result / size;
+        System.out.println("The average of the " + size + " numbers are " + result);
+    }
+}
